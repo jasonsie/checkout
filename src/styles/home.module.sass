@@ -1,0 +1,19 @@
+$breakpoint-tablet: 764px
+
+.bg
+  width: 100vw
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+.header
+  width: 90%
+  position: fixed
+  margin: 5rem
+  display: flex
+  justify-content: flex-end
+  @media screen and (max-width: $breakpoint-tablet)
+    width: 100%
+    margin: 3rem 1rem
+    justify-content: center

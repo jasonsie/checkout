@@ -1,5 +1,14 @@
-import '@/styles/globals.css'
+import Layout from '@/views/layout';
+import { StylesProvider } from '@mui/styles';
+import { appWithTranslation } from 'next-i18next';
+import '@/styles/globals.css';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }) => (
+  <StylesProvider injectFirst>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  </StylesProvider>
+);
+
+export default appWithTranslation(MyApp);

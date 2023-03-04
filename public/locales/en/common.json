@@ -1,0 +1,21 @@
+{
+  "bar": ["My data", "Payments"],
+  "step1": {
+    "title": "My Data",
+    "desc": "Please enter your personal data and press continue",
+    "ft": "First Name",
+    "lt": "Last Name",
+    "Rbtn": "continue"
+  },
+  "step2": {
+    "title": "Payment",
+    "desc": "After making the payment, you will receive a confirmation email with details of your purchase",
+    "Lbtn": "Pay",
+    "Rbtn": "Back"
+  },
+  "step3": {
+    "title": "Order Created",
+    "desc": "Congraduations!",
+    "Rbtn": "Back"
+  }
+}
