@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import css from '@/styles/checkout.module.sass';
 import { Box, Button, Card, CardHeader, CardContent, Typography } from '@mui/material';
+import LoadingButton from '@mui/lab/LoadingButton';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import master from '../../public/icons/master.svg';
 import visa from '../../public/icons/visa.svg';
@@ -14,8 +16,10 @@ const F_payment = ({ data }) => {
   const { title, desc, Lbtn, Rbtn } = transCtx;
   const router = useRouter();
   const { pathname } = router;
+  const [isLoading, setIsLoading] = useState(false);
 
   function paymentHandler() {
+    setIsLoading(!isLoading);
     sessionStorage.removeItem('user');
     handleNext();
     let response = payProcessor();
@@ -58,7 +62,9 @@ const F_payment = ({ data }) => {
             <Link href={pathname.replace('[step]', 'step1')}>
               <Button onClick={handleBack}>{Rbtn}</Button>
             </Link>
-            <Button onClick={paymentHandler}>{Lbtn}</Button>
+            <LoadingButton loading={isLoading} onClick={paymentHandler}>
+              {Lbtn}
+            </LoadingButton>
           </Box>
         </CardContent>
       </Card>
