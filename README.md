@@ -32,4 +32,4 @@
 | I     | SOP                  |
 | ----- | -------------------- |
 | dev   | `yarn` -> `yarn dev` |
-| build | `yarn build`         |
+| build | `yarn build~`        |
