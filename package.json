@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "git": "git add . && git commit -m echo'$COMMIT_MESSAGE' && git push"
+    "git": "git add . && git commit -m echo $COMMIT_MESSAGE && git push"
   },
   "COMMIT_MESSAGE": "Default commit message",
   "dependencies": {
